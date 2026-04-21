@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.flikah/scout-mcp",
+  "title": "Scout",
+  "description": "Real estate agent directory + lead routing. Find licensed real estate agents by geography, search MLS listings (SC + GA), route buyer/seller leads, and subscribe to proprietary seller-intent signals (probate, NOD, FSBO). Operated by Flika Realty LLC, a real estate brokerage licensed in South Carolina and Georgia.",
+  "version": "0.1.0",
+  "repository": {
+    "source": "github",
+    "url": "https://github.com/Flikah/scout-mcp"
+  },
+  "websiteUrl": "https://scout.realestate",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://scout.realestate/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token for authenticated tools (scout.route_lead, scout.get_seller_signals). Anonymous access works without this header for scout.coverage, scout.search_listings, and scout.find_agent. Request a key at spencer@flikah.com.",
+          "isRequired": false,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
