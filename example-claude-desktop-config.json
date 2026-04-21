@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "scout": {
+      "url": "https://scout.realestate/api/mcp",
+      "transport": "http",
+      "headers": {
+        "Authorization": "Bearer flika_live_YOUR_KEY_HERE"
+      }
+    }
+  }
+}
